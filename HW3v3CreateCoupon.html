@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://open-eshop.stqa.ru/" />
+<title>HW1CreateCoupon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">HW1CreateCoupon</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/oc-panel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=eShop</td>
+	<td>eShop</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Coupons&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div#content a.btn</td>
+	<td>New</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>BestOffer</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=discount_amount</td>
+	<td>10%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=valid_date</td>
+	<td>2017-12-31</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=number_coupons</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.alert-success</td>
+	<td>× SuccessCoupon BestOffer created</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[contains(text(), 'BestOffer')]</td>
+	<td>BestOffer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=td:contains('BestOffer')</td>
+	<td>BestOffer</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=name</td>
+	<td>BestOffer</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form.form-inline &gt; button.btn</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=i.glyphicon-trash</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
